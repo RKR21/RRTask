@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+.product-name {
+  @apply font-serif text-xl text-[#522a27] mb-2 ml-1;
+}
+.product-info {
+  @apply font-serif text-[#522a27] ml-1;
+}
