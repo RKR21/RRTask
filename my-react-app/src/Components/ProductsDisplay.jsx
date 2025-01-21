@@ -25,7 +25,7 @@ const ProductsDisplay = ({ products, setProducts }) => {
   return (
     <div className="flex flex-col">
       <button
-        className="bg-[#C73E1D] border rounded-md text-xl mb-8"
+        className="bg-[#C73E1D] border rounded-md text-xl m-8 mx-auto p-3"
         onClick={openForm}
       >
         Add
