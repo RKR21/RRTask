@@ -25,7 +25,8 @@ const ProductsDisplay = ({ products, setProducts }) => {
   return (
     <div className="flex flex-col">
       <button
-        className="bg-[#C73E1D] border rounded-md text-xl m-8 mx-auto p-3"
+        className="bg-[#C73E1D] border rounded-md text-xl text-white 
+        font-serif m-8 mx-auto p-3 hover:bg-[#9cb380] hover:text-black duration-300"
         onClick={openForm}
       >
         Add
@@ -46,7 +47,7 @@ const ProductsDisplay = ({ products, setProducts }) => {
               <p className="product-name">{product.name}</p>
               <p className="product-info">${product.price}</p>
               <p className="product-info">{product.category}</p>
-              <p className="product-info">{product.stock}</p>
+              <p className="product-info">{product.stock} left</p>
             </div>
           </div>
         ))}
