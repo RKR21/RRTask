@@ -33,7 +33,7 @@ const CartsDisplay = ({ carts, users, products }) => {
     setIsModalOpen(false);
   };
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-8 mt-8">
       {carts.map((cart, index) => (
         <div
           key={cart.id}
@@ -48,8 +48,16 @@ const CartsDisplay = ({ carts, users, products }) => {
             </p>
             <p className="product-info">
               <strong>Date: </strong>
-              {cart.date}
+              {new Date(cart.date).toLocaleString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: true,
+              })}
             </p>
+
             <p className="product-info">
               <strong>Status: </strong>
               {cart.status}
