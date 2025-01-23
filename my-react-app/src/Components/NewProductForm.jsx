@@ -172,7 +172,17 @@ const AddProductForm = ({ addProduct, closeForm }) => {
               />
             </div>
           </div>
-
+          <div>
+            <label className="block">Product ID</label>
+            <input
+              type="number"
+              name="id"
+              value={newProduct.id}
+              onChange={handleChange}
+              className="border p-2 w-full"
+              required
+            />
+          </div>
           <button
             type="submit"
             className="bg-[#C73E1D] text-white p-2 rounded-md w-full"
